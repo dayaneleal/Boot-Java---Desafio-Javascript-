@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style_panel.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <script type="module" src="js/panel.js"></script>
+    <title>Painel - FlashJS</title>
+  </head>
+  <body class="flex">
+    <nav>
+      <ul>
+        <li>
+          <a class="flex" id="link-cliente" href="#"
+            ><span class="material-symbols-outlined">group_add</span>Clientes</a
+          >
+        </li>
+        <li>
+          <a class="flex" id="link-produto" href="#"
+            ><span class="material-symbols-outlined"> redeem </span>Produtos</a
+          >
+        </li>
+        <li>
+          <a class="flex" id="link-pedido" href="#"
+            ><span class="material-symbols-outlined"> shopping_cart </span>
+            Pedidos</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div id="clientes" class="flex">
+        <section id="form-clientes" class="flex">
+          <header class="flex">
+            <span id="cli">Clientes</span> <span id="fechar-cli">X</span>
+          </header>
+          <label for="codigo">Código</label>
+          <input type="text" name="" id="codigo" disabled />
+          <label for="nome">Nome</label>
+          <input type="text" name="" id="nome" />
+          <label for="dataCadastro">Data Cadastro</label>
+          <input type="text" name="" id="dataCadastro" />
+          <div class="botoes">
+            <div class="botoes-nav">
+              <button class="btn-mudar-cli anterior">&#60;</button>
+              <button class="btn-mudar-cli proximo">&#62;</button>
+            </div>
+            <div>
+              <button class="btn-novo clientes">Novo</button>
+              <button class="btn-salvar cliente">Salvar</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="produtos">
+        <section id="form-produtos" class="flex">
+          <header class="flex">
+            <span id="pro">Produtos</span>
+            <span id="fechar-pro">X</span>
+          </header>
+          <label for="codigo-prod">Código</label>
+          <input type="text" name="" id="codigo-prod" disabled />
+          <label for="descricao-prod">Descrição</label>
+          <input type="text" name="" id="descricao-prod" />
+          <label for="preco-prod">Preço</label>
+          <input type="text" name="" id="preco-prod" />
+          <label for="qtd-prod">Quantidade</label>
+          <input type="text" name="" id="qtd-prod" />
+          <div class="botoes">
+            <div class="botoes-nav">
+              <button class="btn-mudar-cli prodAnterior">&#60;</button>
+              <button class="btn-mudar-cli proximoProd">&#62;</button>
+            </div>
+            <div>
+              <button class="btn-novo produto">Novo</button>
+              <button class="btn-salvar produto">Salvar</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="pedidos">
+        <form id="form-pedidos" class="flex">
+          <header class="flex">
+            <span id="ped">Pedidos</span> <span id="fechar-pedido">X</span>
+          </header>
+          <label for="codigo-cli">Código do Cliente</label>
+          <input type="text" name="" id="codigo-cli" />
+          <label for="pedido-cli">Cliente</label>
+          <input type="text" name="" id="pedido-cli" disabled />
+
+          <section id="localizar-prod">
+            <header>Localizar o Pedido</header>
+            <div id="form-localizar-prod" class="flex">
+              <input type="text" name="" id="cod-item" />
+              <input type="text" name="" id="nome-item" disabled />
+              <input type="text" name="" id="preco-item" disabled />
+              <input type="text" name="" id="qtd-item" />
+              <input
+                type="button"
+                id="lancar-pedido"
+                value="Lançar no Pedido"
+              />
+            </div>
+          </section>
+
+          <section id="itens-pedidos">
+            <header>Itens do Pedido</header>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Descrição</th>
+                  <th>Preço</th>
+                  <th>Qtd</th>
+                  <th>Sub Total</th>
+                </tr>
+              </thead>
+              <tbody id="corpo"></tbody>
+            </table>
+            <p class="flex"><span id="total"></span></p>
+              
+
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

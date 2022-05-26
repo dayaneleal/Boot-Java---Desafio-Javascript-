@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+}
+
+:root{
+  --border-gray: rgb(169, 169, 169);
+}
+
+.flex{
+  display: flex;
+ }
+
+nav {
+  border-right: 1px solid var(--border-gray);
+  width:23vw;
+  height: 100vh;
+}
+
+ul > li{
+  list-style: none;
+}
+
+span{
+  margin: 5px
+}
+
+a{
+  width: 100vw;
+  align-items: center;
+  text-decoration: none;
+}
+
+label{
+  margin-bottom: 3px;
+}
+
+/* MAIN */
+main {
+  justify-content: center;
+  width: 100vw;
+}
+
+#form-clientes, #form-produtos{
+  border: 1px solid var(--border-gray);
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+#form-clientes > input, #form-produtos >input, #form-pedidos > input{
+  margin-bottom: 8px;
+}
+
+#clientes, #produtos, #pedidos {
+  display: none;
+}
+
+header {
+  margin-top: 5px;
+  color: #000;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#fechar-cli, #fechar-pro, #fechar-pedido {
+  color: rgb(220, 0, 0);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+span#cli, span#pro, span#ped{
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid var(--border-gray);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input:disabled{
+  color:var(--border-gray);
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.botoes{
+  display: flex;
+  justify-content: space-between;
+}
+
+ .btn-mudar-cli{
+  background-color: rgb(108, 4, 206);
+  color: white;
+  font-weight:200;
+  padding: 8px 25px;
+  
+}
+
+ .btn-novo{
+  background-color: rgb(58, 139, 239);
+  color: #fff;
+}
+
+ .btn-salvar{
+  background-color: rgb(15, 151, 58);
+  color: #fff;
+}
+
+/*Formulário Pedidos*/
+
+
+#form-pedidos{
+  border: 1px solid var(--border-gray);
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px auto;
+  width: 850px;
+}
+
+#localizar-prod{
+  display:block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  margin-top: 10px;
+}
+
+#localizar-prod > header, #itens-pedidos > header{
+  color:rgb(108, 4, 206);
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+#form-localizar-prod{
+  background-color: rgb(198, 198, 200);
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#form-localizar-prod > input[type=button]{
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#cod-item{
+  width: 6%;
+}
+
+#nome-item {
+  width: 30%;
+}
+
+#preco-item{
+  width: 15%
+}
+
+#qtd-item{
+  width: 15%
+}
+
+#lancar-pedido{
+  width: 30%;
+}
+
+/*TABELA ITENS DO PEDIDO*/
+
+table{
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+thead{
+  text-align: left;
+}
+
+
+span#total{
+  display: none;
+  color:red;
+  padding: 5px;
+  background-color: rgb(198, 198, 200);
+  margin-left:auto; 
+}
+
